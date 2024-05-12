@@ -1,0 +1,51 @@
+<div class="admin-title">
+    <h2>Posts</h2>
+    <a href="/add-post">+ Add New</a>
+</div>
+
+<div class="container"> 
+<ul class="admin-posts">
+    <% data.forEach(post => { %>
+        <li>
+            <a href="/post/<%= post._id %>">
+                <%= post.title %> &nearr;
+            </a>
+            <div class="admin-post-controls">
+                <a href="/edit-post/<%= post._id %>" class="btnE">Edit</a>
+  
+                <form action="/delete-post/<%= post._id %>?_method=DELETE" method="POST">
+                    <input type="submit" value="Delate" class="btnD">
+                </form>
+            </div>
+        </li>
+        
+    <% }); %>
+
+</ul>
+</div>
+
+<div class="admin-title">
+    <h2>Skills</h2>
+    <a href="/add-skill">+ Add-kills</a>
+</div>
+
+<div class="container"> 
+    <ul class="admin-posts">
+        <% dataskills.forEach(skill => { %>
+            <li>
+                <a href="/edit-skill">
+                    <%= skill.Skillname %> &nearr;
+                </a>
+                <div class="admin-post-controls">
+                    <a href="/edit-skill" class="btnE">Edit</a>
+      
+                    <form action="/delete-skill?_method=DELETE" method="POST">
+                        <input type="submit" value="Delate" class="btnD">
+                    </form>
+                </div>
+            </li>
+            
+        <% }); %>
+    
+    </ul>
+</div>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="..." crossorigin="anonymous">
+    <title><%= locals.title %></title>
+</head>
+<meta name="description" content= "<%= locals.description %>">
+<link rel="stylesheet" href="/css/style.css">
+<script type="text/javascript" defer src="/js/script.js"></script>
+<body>
+    <%- include('../partiels/search.ejs') %>
+    <div>
+        <div class="container">
+            <%- include('../partiels/header.ejs') %>
+            
+            <main class="main">
+                <%- body %>
+            </main>
+
+            
+        </div>
+        <%- include('../partiels/footer.ejs') %>
+    </div>
+    
+    
+</body>
+</html>

@@ -1,0 +1,60 @@
+<div class="author">
+    <h1 class="author__heading"> Hi i am Fono colince!</h1>
+</div>
+
+<div class="container">
+    <p class="author__body"> Ingenering student in EILCO</p>
+    <img src="/img/image3.png" alt="Computer" class="hero-image" width="981" height="528">
+    
+
+    <section class="articles">
+        <h1 class="articles__heading">Last Posts</h1>
+
+        <ul class="article-ul">
+
+
+            <% data.forEach(post =>{ %>
+                
+        <li>
+            <a href="/post/<%= post._id %>">
+                <span><%= post.title %></span>
+                <span class="article-list__date"><%= post.createdAt.toDateString() %></span>
+            </a>
+        </li>
+        
+        <% }) %>
+
+
+
+        </ul>
+
+        <% if( nextPage !== null ){ %>
+            <a href="/?page=<%= nextPage %>" class="pagination">&lt; View Older Post</a>
+        <% } %>
+
+    </section>
+
+<div class="chatbot-link" id="linked">
+    <div class="message-zonechat" hidden="true" id="bot-bonjour">bojour je suis Polybot</div>
+    <a href="/chatbot" >
+        <img src="/img/bot.png" alt="chatbot" class="bot-icone" >
+    </a>
+</div>
+
+<script>
+    const linked = document.getElementById("linked");
+    const botbonjour = document.getElementById("bot-bonjour");
+
+    linked.addEventListener("mouseover", function() {
+        botbonjour.style.display = "block"; // Afficher le message lorsque la souris passe sur l'icône
+    });
+
+    linked.addEventListener("mouseout", function() {
+        botbonjour.style.display = "none"; // Masquer le message lorsque la souris quitte l'icône
+    });
+
+</script>
+    
+    
+
+</div>

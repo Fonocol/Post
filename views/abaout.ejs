@@ -1,0 +1,97 @@
+<h1>About Me</h1>
+<section class="container">
+    <section class="section about-section">
+        <h2>Who Am I?</h2>
+        <p>I am <strong>Fono Colince</strong>, a passionate software engineer currently studying at the Ecole d'Ingénieurs du Littoral-Côte-d‘Opale in France. I have a strong interest in artificial intelligence, data science, and programming languages such as Python, Java, C, and R. In addition to my academic pursuits, I am deeply committed to contributing to the development of my country, Cameroon, and the African continent as a whole.</p>
+    </section>
+    <section class="section skills-section">
+        <h2>Skills</h2>
+        <div class="skills">
+            <% dataskill.forEach(skill =>{ %>
+            
+                <div class="skill"><%= skill.Skillname  %></div>  
+            <% }) %>
+        </div><br>
+        <div>
+            <a href="/admin" class="btnE">Add Skill</a>
+        </div>
+    </section>
+    <section class="section contact-section">
+        <h2>Contact Me</h2>
+        <ul class="contact-list">
+            <li><a href="mailto:fonocolince@gmail.com" class="contact-link"><i class="fas fa-envelope"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/fonocolince/" class="contact-link"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://github.com/fonocolince" class="contact-link"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://www.instagram.com/fonocolince/" class="contact-link"><i class="fab fa-instagram"></i></a></li>
+            <!-- Ajoutez d'autres liens avec les icônes correspondantes ici -->
+            <li><a href="https://wa.me/+237659312409" class="contact-link"><i class="fab fa-whatsapp"></i></a></li>
+            <li><a href="https://twitter.com/fonocolince" class="contact-link"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.facebook.com/?locale=fr_FR" class="contact-link"><i class="fab fa-facebook"></i></a></li>
+        </ul>        
+    </section>
+    
+    <section class="section image-band">
+        <h2>My Journey</h2>
+        <div class="image-slider-container">
+            <div class="image-slider">
+                <div class="slide"><img src="/img/image1.png" alt="Image 1"></div>
+                <div class="slide"><img src="/img/image2.png" alt="Image 2"></div>
+                <div class="slide"><img src="/img/image3.png" alt="Image 3"></div>
+                <div class="slide"><img src="/img/image4.png" alt="Image 4"></div>
+                <div class="slide"><img src="/img/image5.png" alt="Image 1"></div>
+                <div class="slide"><img src="/img/image6.png" alt="Image 2"></div>
+                <div class="slide"><img src="/img/image7.png" alt="Image 3"></div>
+                <div class="slide"><img src="/img/image8.png" alt="Image 4"></div>
+                <div class="slide"><img src="/img/image9.png" alt="Image 3"></div>
+                <div class="slide"><img src="/img/image10.png" alt="Image 4"></div>
+            </div>
+        </div>
+        <div class="navigation">
+            <button class="btnE" onclick="moveSlider(-1)"><i class="fas fa-chevron-left"></i> Previous</button>
+            <button class="btnE" onclick="moveSlider(1)">Next <i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+    
+    <script>
+        let slideIndex = 1;
+        showSlide(slideIndex);
+    
+        function moveSlider(n) {
+            showSlide(slideIndex += n);
+        }
+    
+        function showSlide(n) {
+            const slides = document.getElementsByClassName("slide");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
+
+
+
+
+<div class="chatbot-link" id="linked">
+    <div class="message-zonechat" hidden="true" id="bot-bonjour">bojour je suis Polybot</div>
+    <a href="/chatbot" >
+        <img src="/img/bot.png" alt="chatbot" class="bot-icone" >
+    </a>
+</div>
+
+<script>
+    const linked = document.getElementById("linked");
+    const botbonjour = document.getElementById("bot-bonjour");
+
+    linked.addEventListener("mouseover", function() {
+        botbonjour.style.display = "block"; // Afficher le message lorsque la souris passe sur l'icône
+    });
+
+    linked.addEventListener("mouseout", function() {
+        botbonjour.style.display = "none"; // Masquer le message lorsque la souris quitte l'icône
+    });
+
+</script>
+</section>

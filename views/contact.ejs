@@ -1,0 +1,37 @@
+<h1 class="author__heading">Contact</h1>
+<section class="container">
+    <ul class="contact-list">
+        <li><a href="mailto:fonocolince@gmail.com" class="contact-link"><i class="fas fa-envelope"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/fonocolince/" class="contact-link"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://github.com/fonocolince" class="contact-link"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://www.instagram.com/fonocolince/" class="contact-link"><i class="fab fa-instagram"></i></a></li>
+            <!-- Ajoutez d'autres liens avec les icônes correspondantes ici -->
+            <li><a href="https://wa.me/+237659312409" class="contact-link"><i class="fab fa-whatsapp"></i></a></li>
+            <li><a href="https://twitter.com/fonocolince" class="contact-link"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.facebook.com/?locale=fr_FR" class="contact-link"><i class="fab fa-facebook"></i></a></li>
+    </ul>
+
+
+
+</section>
+<div class="chatbot-link" id="linked">
+    <div class="message-zonechat" hidden="true" id="bot-bonjour">bojour je suis Polybot</div>
+    <a href="/chatbot" >
+        <img src="/img/bot.png" alt="chatbot" class="bot-icone" >
+    </a>
+</div>
+
+<script>
+    const linked = document.getElementById("linked");
+    const botbonjour = document.getElementById("bot-bonjour");
+
+    linked.addEventListener("mouseover", function() {
+        botbonjour.style.display = "block"; // Afficher le message lorsque la souris passe sur l'icône
+    });
+
+    linked.addEventListener("mouseout", function() {
+        botbonjour.style.display = "none"; // Masquer le message lorsque la souris quitte l'icône
+    });
+
+</script>
+

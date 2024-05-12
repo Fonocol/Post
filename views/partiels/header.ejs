@@ -1,0 +1,23 @@
+<section class="container-header">
+    <header class="header">
+        <a href="/" class="header__logo">NodeJs</a>
+
+        <nav class="header__nav">
+            <ul >
+                <li><a href="/" class="<%= isActiveRoute('/', currentRoute) %>">Home</a></li>
+                <li><a href="/abaout" class="<%= isActiveRoute('/abaout', currentRoute) %>">About</a></li>
+                <li><a href="/contact" class="<%= isActiveRoute('/contact', currentRoute) %>">Contact</a></li>
+                <li><a href="/chatbot" class="<%= isActiveRoute('/chatbot', currentRoute) %>">ChatBot</a></li>
+                <li><a href="/admin">LognIn</a></li>
+            </ul>
+        </nav>
+        <div class="header__button">
+            <button class="searchBtn" aria-expanded="false">
+                search
+                <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+                    <image href="/img/search.png" width="20" height="20" alt="Search" />
+                </svg>
+            </button>
+        </div>
+   </header> 
+</section>

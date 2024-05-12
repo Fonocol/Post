@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= locals.title %></title>
+</head>
+<meta name="description" content= "<%= locals.description %>">
+<link rel="stylesheet" href="/css/style.css">
+<script type="text/javascript" defer src="/js/script.js"></script>
+<body>
+    <div>
+        <div class="container">
+            <%- include('../partiels/header_admin.ejs') %>
+            
+            <main class="main">
+                <%- body %>
+            </main>
+        </div>
+        <%- include('../partiels/footer.ejs') %>
+    </div>
+    
+    
+</body>
+</html>
